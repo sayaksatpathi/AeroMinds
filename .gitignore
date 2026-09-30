@@ -35,3 +35,6 @@ Thumbs.db
 *.temp*.zip
 *.pt
 !models/*.pt
+
+# Large training datasets
+training_data/
