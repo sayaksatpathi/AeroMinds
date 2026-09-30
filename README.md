@@ -7,6 +7,14 @@ sdk: docker
 app_port: 7860
 ---
 
+# 🌿 AeroMinds — Aerial Waste Intelligence
+
+**Detect • Assess • Respond** — autonomous aerial intelligence for smarter urban sanitation and real-time environmental protection.
+
+> 🏆 **ELCIA Next-Gen Innovative Tech Hackathon — 2nd Runner-Up** (top 3 of 180+ teams).
+
+---
+
 ## Overview
 
 AeroMinds turns raw aerial drone footage into actionable environmental intelligence. Using a fine-tuned **YOLOv8** detector, it identifies illegal dumping sites, scores their severity, and routes them through a response pipeline — helping municipalities keep cities clean without manual monitoring.
