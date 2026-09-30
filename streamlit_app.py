@@ -254,17 +254,18 @@ def show_incidents():
             </div>
             """)
             
-            c1, c2, c3 = st.columns([1,1,2])
-            with c1:
-                new_status = st.selectbox(
-                    "Update Status",
-                    ["PENDING", "ASSIGNED", "CLEARED"],
-                    index=["PENDING", "ASSIGNED", "CLEARED"].index(incident["status"]),
-                    key=f'status_{incident["incident_id"]}',
-                    label_visibility="collapsed"
-                )
-            with c2:
-                if st.button("Apply", key=f'update_{incident["incident_id"]}'):
+            with st.form(key=f'form_{incident["incident_id"]}'):
+                c1, c2, c3 = st.columns([1,1,2])
+                with c1:
+                    new_status = st.selectbox(
+                        "Update Status",
+                        ["PENDING", "ASSIGNED", "CLEARED"],
+                        index=["PENDING", "ASSIGNED", "CLEARED"].index(incident["status"]),
+                        label_visibility="collapsed"
+                    )
+                with c2:
+                    submitted = st.form_submit_button("Apply")
+                if submitted:
                     update_incident_status(incident["incident_id"], new_status)
                     st.rerun()
 
